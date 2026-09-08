@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Крестики-нолики</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            grid-template-rows: repeat(3, 80px);
+            gap: 5px;
+            width: 250px;
+            margin: 20px auto;
+        }
+
+        .cell {
+            width: 80px;
+            height: 80px;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        .cell:hover {
+            background-color: #f0f0f0;
+        }
+
+        #message {
+            font-size: 18px;
+        }
+
+        #restart {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h1>Крестики-нолики</h1>
+
+    <div id="game-board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+    </div>
+
+    <p id="message">Ход игрока: X</p>
+
+    <button id="restart">Начать заново</button>
+
+</body>
+</html>
